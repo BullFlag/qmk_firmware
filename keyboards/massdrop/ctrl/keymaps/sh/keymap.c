@@ -1,9 +1,12 @@
 /*
 
-JDL Monday April 1 2019
+JDL
+
+Monday April 1 2019
 Changes to add Silent Hunter Support
   Assign Leader Key with [ ] \ to Time compression
 
+Monday; February 18, 2019
 Changes to Default keymap
   Moved 2 CTRL LED key assignments Tab is now R and Capslock is now C
   Put Leader key on layer 0 made sure it's transparent on upper layers
@@ -86,7 +89,6 @@ const uint16_t PROGMEM fn_actions[] = {
 
 };
 
-
 // Runs just one time when the keyboard initializes.
 void matrix_init_user(void) {
 };
@@ -105,10 +107,7 @@ void matrix_scan_user(void) {
     // Initialize did_leader_succeed as well as leading to be false
     did_leader_succeed = leading = false;
 
-
     // Replace the sequences below with your own sequences.
-
-
 
     SEQ_ONE_KEY(KC_A) {
       // When I press KC_LEAD and then A, this sends CTRL + SHIFT + A Launch Keyboard Maestro
@@ -140,29 +139,23 @@ void matrix_scan_user(void) {
       SEND_STRING(SS_LCTRL(SS_LSFT("z")));
       did_leader_succeed = true;
     }
-
     SEQ_ONE_KEY(KC_S) {
       // When I press KC_LEAD and then S, this sends CMD + SHIFT + 5 macOS ScrShot
       SEND_STRING(SS_LALT(SS_LSFT("5")));
       did_leader_succeed = true;
     }
-
     SEQ_ONE_KEY(KC_GRAVE) {
       // When I press KC_LEAD and then `, this sends CTRL + SHIFT + ` OnePassW
       SEND_STRING(SS_LCTRL(SS_LSFT("`")));
       did_leader_succeed = true;
     }
-
     SEQ_ONE_KEY(KC_F12) {
       // When I press KC_LEAD and then Pause, this sends CTRL + SHIFT + F12  Sleep
       SEND_STRING(SS_LCTRL(SS_LSFT("F12")));
       did_leader_succeed = true;
     }
 
-
-
     // Add Silent Hunter Time Compression support
-
 
     SEQ_ONE_KEY(KC_LBRACKET) {
       // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
@@ -184,7 +177,6 @@ void matrix_scan_user(void) {
 
     // Note: This is not an array, you don't need to put any commas
     // or semicolons between sequences.
-
 
     SEQ_TWO_KEYS(KC_K, KC_M) {
       // When I press KC_LEAD and then K followed by M, this sends CTRL + SHIFT + A
