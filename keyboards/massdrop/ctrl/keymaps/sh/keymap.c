@@ -165,22 +165,18 @@ void matrix_scan_user(void) {
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_PLUS)SS_UP(X_LSHIFT));
      did_leader_succeed = true;
     }
-/*
     SEQ_ONE_KEY((KC_BSLASH) {
      // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_MINUS)SS_UP(X_LSHIFT));
      did_leader_succeed = true;
     }
-*/
     // Note: This is not an array, you don't need to put any commas
     // or semicolons between sequences.
-
     SEQ_TWO_KEYS(KC_K, KC_M) {
       // When I press KC_LEAD and then K followed by M, this sends CTRL + SHIFT + A
       SEND_STRING(SS_LCTRL(SS_LSFT("a")));
       did_leader_succeed = true;
     }
-
     // Call leader_end at the end of the function, instead of at
     // the start. This way, we're sure we have set did_leader_succeed.
     leader_end();
