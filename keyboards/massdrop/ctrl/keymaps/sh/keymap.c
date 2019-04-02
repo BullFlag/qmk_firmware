@@ -156,7 +156,7 @@ void matrix_scan_user(void) {
     }
 
     // Add Silent Hunter Time Compression support
-
+/*
     SEQ_ONE_KEY(KC_LBRACKET) {
       // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
       SEND_STRING(SS_TAP(X_KP_PLUS));
@@ -169,12 +169,13 @@ void matrix_scan_user(void) {
      did_leader_succeed = true;
     }
 
-     SEQ_ONE_KEY((KC_BSLASH) {
-      // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
+    SEQ_ONE_KEY((KC_BSLASH) {
+     // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_MINUS)SS_UP(X_LSHIFT));
-      did_leader_succeed = true;
+     did_leader_succeed = true;
     }
 
+*/
     // Note: This is not an array, you don't need to put any commas
     // or semicolons between sequences.
 
