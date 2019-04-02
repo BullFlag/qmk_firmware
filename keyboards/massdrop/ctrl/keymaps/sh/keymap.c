@@ -160,19 +160,17 @@ void matrix_scan_user(void) {
       SEND_STRING(SS_TAP(X_KP_PLUS));
       did_leader_succeed = true;
     }
-/*
     SEQ_ONE_KEY(KC_RBRACKET) {
      // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_PLUS)SS_UP(X_LSHIFT));
      did_leader_succeed = true;
     }
-
+/*
     SEQ_ONE_KEY((KC_BSLASH) {
      // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_MINUS)SS_UP(X_LSHIFT));
      did_leader_succeed = true;
     }
-
 */
     // Note: This is not an array, you don't need to put any commas
     // or semicolons between sequences.
