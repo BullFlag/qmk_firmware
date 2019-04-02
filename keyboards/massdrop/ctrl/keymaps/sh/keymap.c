@@ -172,13 +172,13 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY(KC_RBRACKET) {
      // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
-      SEND_STRING(SS_LSFT(KC_KP_PLUS));
+      SEND_STRING(LSFT(KC_KP_PLUS));
       did_leader_succeed = true;
     }
 
      SEQ_ONE_KEY((KC_BSLASH) {
       // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
-      SEND_STRING(SS_LSFT(KC_KP_MINUS)) ;
+      SEND_STRING(LSFT(KC_KP_MINUS)) ;
       did_leader_succeed = true;
     }
 
