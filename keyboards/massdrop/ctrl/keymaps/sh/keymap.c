@@ -166,7 +166,7 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY(KC_LBRACKET) {
       // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
-      SEND_STRING(SS_TAP(X_KP_PLUS);
+      SEND_STRING(SS_TAP(X_KP_PLUS));
       did_leader_succeed = true;
     }
 
