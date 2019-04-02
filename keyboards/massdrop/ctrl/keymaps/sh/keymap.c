@@ -154,15 +154,13 @@ void matrix_scan_user(void) {
       SEND_STRING(SS_LCTRL(SS_LSFT("F12")));
       did_leader_succeed = true;
     }
-
-    // Add Silent Hunter Time Compression support
-/*
+    // These next three add Silent Hunter Time Compression support
     SEQ_ONE_KEY(KC_LBRACKET) {
       // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
       SEND_STRING(SS_TAP(X_KP_PLUS));
       did_leader_succeed = true;
     }
-
+/*
     SEQ_ONE_KEY(KC_RBRACKET) {
      // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
      SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_PLUS)SS_UP(X_LSHIFT));
