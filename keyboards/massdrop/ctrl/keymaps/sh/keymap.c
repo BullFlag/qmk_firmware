@@ -166,24 +166,21 @@ void matrix_scan_user(void) {
 
     SEQ_ONE_KEY(KC_LBRACKET) {
       // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
-      SEND_STRING(KC_KP_PLUS);
+      SEND_STRING(SS_TAP(X_KP_PLUS);
       did_leader_succeed = true;
     }
 
     SEQ_ONE_KEY(KC_RBRACKET) {
      // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
-      SEND_STRING(LSFT(KC_KP_PLUS));
-      did_leader_succeed = true;
+     SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_PLUS)SS_UP(X_LSHIFT));
+     did_leader_succeed = true;
     }
 
      SEQ_ONE_KEY((KC_BSLASH) {
       // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
-      SEND_STRING(LSFT(KC_KP_MINUS)) ;
+     SEND_STRING(SS_DOWN(X_LSHIFT)SS_TAP(X_KP_MINUS)SS_UP(X_LSHIFT));
       did_leader_succeed = true;
     }
-
-
-
 
     // Note: This is not an array, you don't need to put any commas
     // or semicolons between sequences.
