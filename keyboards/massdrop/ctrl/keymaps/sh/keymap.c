@@ -164,23 +164,23 @@ void matrix_scan_user(void) {
     // Add Silent Hunter Time Compression support
 
 
-    SEQ_ONE_KEY(KC_LBRACKET) {
-      // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
-      SEND_STRING(KC_KP_PLUS);
-      did_leader_succeed = true;
-    }
+    SEQ_ONE_KEY(KC_LBRACKET) {
+      // When I Press KC_LEAD And Then [ , This Sends Numpad Plus  Inc Compression
+      SEND_STRING(KC_KP_PLUS);
+      did_leader_succeed = true;
+    }
 
-    SEQ_ONE_KEY(KC_RBRACKET) {
-     // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
-      SEND_STRING(SS_LSFT(KC_KP_PLUS));
-      did_leader_succeed = true;
-    }
+    SEQ_ONE_KEY(KC_RBRACKET) {
+     // When I Press KC_LEAD And Then ] , This Sends Shift + Numpad Plus  Compression=Max
+      SEND_STRING(SS_LSFT(KC_KP_PLUS));
+      did_leader_succeed = true;
+    }
 
-     SEQ_ONE_KEY((KC_BSLASH) {
-      // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
-      SEND_STRING(SS_LSFT(KC_KP_MINUS)) ;
-      did_leader_succeed = true;
-    }
+     SEQ_ONE_KEY((KC_BSLASH) {
+      // When I Press KC_LEAD And Then \ , This Sends Shift + Numpad Minus  Compression=1
+      SEND_STRING(SS_LSFT(KC_KP_MINUS)) ;
+      did_leader_succeed = true;
+    }
 
 
 
